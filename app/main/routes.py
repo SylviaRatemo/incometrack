@@ -13,3 +13,7 @@ def profile():
 @bp.route('/login.html')
 def login():
     return render_template('login.html')
+
+@bp.route('/signup.html')
+def signup():
+    return render_template('signup.html')
