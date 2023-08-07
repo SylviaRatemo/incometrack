@@ -18,7 +18,7 @@
     <div class="login-center">
         <div class="login">
             <h1 class="text-center">login</h1>
-            <form action="index.html" class="needs-validation">
+            <form action="{{ url_for('login') }}" method="post" class="needs-validation">
                 <div class="form-group was-validated">
                     <label class="form-label" for="email">Email address</label>
                     <input class="form-control" type="email" id="email" required>
