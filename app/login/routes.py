@@ -1,32 +1,35 @@
 from app.login import bp 
-from flask import Flask, render_template, request, redirect, url_for, session
-import MySQLdb.cursors
-import re
 from app.extensions import db
-from app.models.login import Login
+from app.models.login import login
+from flask import jsonify, request, session
+import json
 
-@bp.route('/login.html', methods = ('GET', 'POST'))
+
+@bp.route('/')
+@bp.route('/login.html', methods=['GET', 'POST'])
 def login():
-    msg = ''
-    if request.method == 'POST' and 'email' in request.form and 'password' in request.form:
-        email = request.form['email']
-        password = request.form['password']
-        cursor = db.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM users WHERE username = %s AND email = %s', (username, email))
-        account = cursor.fetchone()
-        if account:
-            session['loggedin'] = True
-            session['id'] = account['id']
-            session['email'] = account['email']
-            msg = 'Login Success!'
-            return render_template('index.html', msg = msg)
-        else:
-            msg = 'Wrong credentials!'
-    return render_template('login.html', msg = msg)
+    print(request.data.decode('utf-8'))
+    if request.method == 'POST':
+        try:
+            print("Step 2 pass")
+            _json = request.get_json()
+            print(_json)
+            _email = _json.get('email')
+            _password = _json.get('password')
 
-@bp.route('/logout')
-def logout():
-    session.pop('loggedin', None)
-    session.pop('id', None)
-    session.pop('email', None)
-    return redirect(url_for('login'))
+            print("Step 3 pass")
+            if _email and _password:
+                user = login(_email, _password)
+
+                if user != None:
+                    session['email'] = user
+                    return jsonify({'message' : 'Successful login!'})
+            
+            response = jsonify({'message' : 'Bad Request - Invalid credentials!'})
+            response.status_code = 400
+            return response
+        except Exception as e:
+            print("Error parsing JSON:", e)
+            response = jsonify({'message' : 'Error parsing JSON data!'})
+            response.status_code = 400
+            return response
