@@ -12,7 +12,7 @@ Framework: Flask
 Database: MySQL
 * Frontend:
 Programming languages: HTML, CSS, Javascript
-Framework: JQuery
+Framework: JQuery, Flask
 
 The choice of technologies is based on the ALX coursework and I would like to use the knowledge gained to create the system. Improvements and changes can be made as I delve deeper into the project.
 

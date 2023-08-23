@@ -1,7 +1,7 @@
 from app.main import bp 
-from flask import render_template
+from flask import render_template, jsonify, session, request
 
 @bp.route('/')
 @bp.route('/login')
-def index():
-    return render_template('login.html')
+def login():
+	return render_template('login.html')

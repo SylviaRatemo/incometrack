@@ -1,6 +1,31 @@
-from app.main import bp 
-from flask import render_template
+import pymysql
+from app.extensions import db
+from werkzeug.security import check_password_hash
 
-@bp.route('/login')
-def index():
-    return render_template('login.html')
+			
+def login(email, pwd):
+	conn = None;
+	cursor = None;
+	
+	try:
+		conn = db.connect()
+		cursor = conn.cursor()
+		
+		sql = "SELECT email, password FROM users WHERE email=%s"
+		sql_where = (email,)
+		
+		cursor.execute(sql, sql_where)
+		row = cursor.fetchone()
+		
+		if row:
+			if check_password_hash(row[1], pwd):
+				return row[0]
+		return None
+
+	except Exception as e:
+		print(e)
+
+	finally:
+		if cursor and conn:
+			cursor.close()
+			conn.close()
