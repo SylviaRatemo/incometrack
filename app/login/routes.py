@@ -1,6 +1,6 @@
 from app.login import bp 
 from flask import render_template, jsonify, session, request
-from app.models import *
+from app.models.login import checkCredentials
 
 @bp.route('/', methods=['GET', 'POST'])
 def login():
@@ -10,7 +10,7 @@ def login():
 	_password = _json['password']
 	
 	if _email and _password:
-		user = login(_email, _password)
+		user = checkCredentials(_email, _password)
 		
 		if user != None:
 			session['email'] = user

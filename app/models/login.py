@@ -3,7 +3,7 @@ from app.extensions import db
 from werkzeug.security import check_password_hash
 
 			
-def login(email, pwd):
+def checkCredentials(email, pwd):
 	conn = None;
 	cursor = None;
 	
