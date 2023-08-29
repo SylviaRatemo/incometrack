@@ -8,10 +8,10 @@ def create_app(config_class=Config):
     app = Flask(__name__)
 
     app.secret_key = secrets.token_bytes(32)
-
+    
     app.config.from_object(config_class)
 
-    db.init_app(app)
+    db = MySQL(app)    
     
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
@@ -20,3 +20,7 @@ def create_app(config_class=Config):
     app.register_blueprint(login_bp, url_prefix='/login')
 
     return app
+
+if __name__ == '__main__':
+    app = create_app()
+    app.run()
