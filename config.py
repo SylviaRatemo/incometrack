@@ -1,6 +1,6 @@
+import secrets
+
 class Config:
-    DEBUG =True
-    MYSQL_HOST = 'localhost'
-    MYSQL_USER = 'root'
-    MYSQL_PASSWORD = 'root'
-    MYSQL_DB =  'incometracker'
+    SECRET_KEY = secrets.token_bytes(32)
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:root@localhost:3306/incometracker'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False

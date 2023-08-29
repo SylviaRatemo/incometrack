@@ -1,3 +1,3 @@
-from flaskext.mysql import MySQL
+from flask_sqlalchemy import SQLAlchemy
 
-db = MySQL()
+db = SQLAlchemy()
