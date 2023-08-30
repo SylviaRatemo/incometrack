@@ -1,8 +1,11 @@
 from app.login import bp 
-from flask import redirect, render_template, jsonify, session, request
+from flask import redirect, render_template, jsonify, session, request, url_for
 from app.models.login import checkCredentials
+#from app.houses import bp
+
 
 @bp.route('/', methods=['GET', 'POST'])
+@bp.route('/login', methods=['GET', 'POST'])
 def login():
 	_json = request.json
 	#print(_json)
@@ -12,9 +15,12 @@ def login():
 	if _email and _password:
 		user = checkCredentials(_email, _password)
 		if user != None:
-			session['email'] = user
-			return redirect('/houses')
+			session['username'] = user
+			print("Welcome, " + session.get('username'))
+			return jsonify(user)
+		return render_template('login.html')
 
-	resp = jsonify({'message' : 'Bad Request - invalid credendtials'})
-	resp.status_code = 400
-	return resp 
+@bp.route('/logout')
+def logout():
+   session.clear()
+   return redirect(url_for('login.login'))

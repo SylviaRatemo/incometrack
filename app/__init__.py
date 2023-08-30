@@ -15,7 +15,7 @@ def create_app(config_class=Config):
     app.register_blueprint(main_bp)
     
     from app.login import bp as login_bp
-    app.register_blueprint(login_bp, url_prefix='/login')
+    app.register_blueprint(login_bp)
     
     from app.houses import bp as houses_bp
     app.register_blueprint(houses_bp)

@@ -32,12 +32,12 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Welcome, Sylvia</a></li>
-            <li><a href="login.html">Logout</a></li>
+            <li><a href="login.html" id="logout">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
+    <input type="hidden" id="logout-url" value="{{ url_for('login.logout') }}">
     <header id="header">
       <div class="container">
         <div class="row">
@@ -60,9 +60,10 @@
         </div>
       </div>
     </header>
-
+    
     <section id="breadcrumb">
       <div class="container">
+        <div id="msg"></div>
         <ol class="breadcrumb">
           <li><a href="index.html">Dashboard</a></li>
           <li class="active">Houses</li>
@@ -205,5 +206,6 @@
     <!-- Placed at the end of the document so the Houses load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/auth.js') }}"></script>
     </body>
 </html>

@@ -7,8 +7,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Admin Area | Dashboard</title>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='/css/style.css') }}" rel="stylesheet">
     <script src="https://cdn.ckeditor.com/4.7.1/standard/ckeditor.js"></script>
   </head>
   <body>
@@ -175,7 +175,7 @@
     </section>
 
     <footer id="footer">
-      <p>Copyright AdminStrap, &copy; 2017</p>
+      <p>Copyright IncomeTracker, &copy; 2023</p>
     </footer>
 <!-- Modals -->
 
@@ -228,6 +228,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='/js/bootstrap.min.js') }}"></script>
     </body>
 </html>

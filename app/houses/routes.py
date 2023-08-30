@@ -1,6 +1,6 @@
 from app.houses import bp
-from flask import render_template
+from flask import render_template, redirect, url_for
 
 @bp.route('/houses')
-def listHouses():
+def index():
     return render_template('houses.html')

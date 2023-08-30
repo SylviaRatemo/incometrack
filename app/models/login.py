@@ -9,7 +9,7 @@ def checkCredentials(email, pwd):
 		#for entry in user:
 		#	print(f"Username: {entry.username}, Email: {entry.email}")
 		if user and user.password == pwd:
-			return user.email
+			return user.username
 		return None
 	except Exception as e:
 		print(e)
