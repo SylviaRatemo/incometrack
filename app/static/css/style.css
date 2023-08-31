@@ -140,3 +140,11 @@ body{
     background-color: #c0392b;
   }
 }
+
+.flash-messages {
+  list-style-type: none; /* Remove bullet points */
+  color: red;
+  border: 1px solid red; /* Add red border */
+  padding: 10px;
+  background-color: #ffecec; /* Light red background */
+}

@@ -20,6 +20,12 @@ def create_app(config_class=Config):
     from app.houses import bp as houses_bp
     app.register_blueprint(houses_bp)
 
+    from app.units import bp as units_bp
+    app.register_blueprint(units_bp)
+
+    from app.tenants import bp as tenants_bp
+    app.register_blueprint(tenants_bp)
+
     return app
 
 if __name__ == '__main__':

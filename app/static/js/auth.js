@@ -43,7 +43,7 @@ $(document).ready(function() {
 		
 		$.ajax({
 			url: '/logout',
-			dataType: 'GET',
+			dataType: 'html',
 			success: function(data) {
 				//$('#msg').html('<span style="color: green;">You are logged off</span>');
 				var logoutUrl = document.getElementById('logout-url').value;
