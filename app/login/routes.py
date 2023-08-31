@@ -4,8 +4,8 @@ from app.models.login import checkCredentials
 #from app.houses import bp
 
 
-@bp.route('/', methods=['GET', 'POST'])
-@bp.route('/login', methods=['GET', 'POST'])
+#@bp.route('/')
+@bp.route('/login', methods=['POST'])
 def login():
 	_json = request.json
 	#print(_json)

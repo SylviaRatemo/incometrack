@@ -11,5 +11,3 @@ CREATE TABLE users(
     password varchar(60),
     primary key(id)
     );
-
-INSERT INTO users (id, username, email, password) values (1, "root", "ratemosylvia@gmail.com", "root")
