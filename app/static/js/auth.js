@@ -10,7 +10,7 @@ $(document).ready(function() {
 		if(email != "" && pwd != "" ) {
 			if(!regex.test(email)) {
 		console.log(email)
-				$('#msg').html('<span style="color: red;">Invalid email address</span>');
+				$('#msg').html('<span>Invalid email address</span>');
 			} else {
 		$.ajax({
 			method: "POST",
@@ -20,8 +20,8 @@ $(document).ready(function() {
 			dataType: "json",
 			success: function(data) {
 				//$('#msg').html('<span style="color: green;">Welcome</span>');
-				var housesUrl = document.getElementById('houses-url').value;
-				window.location.href = housesUrl;
+				var dashboardUrl = document.getElementById('dashboard-url').value;
+				window.location.href = dashboardUrl;
 			},
 			statusCode: {
 				400: function() {
@@ -31,7 +31,7 @@ $(document).ready(function() {
 			error: function(xhr, textStatus, errorThrown) {
 				console.log("Error:", textStatus, errorThrown);
 				var errorMsg = "Invalid email/username or password.";
-				$('#msg').html('<span style="color: red;">' + errorMsg + '</span>');
+				$('#msg').html('<span>' + errorMsg + '</span>');
 			}
 		});
 		}

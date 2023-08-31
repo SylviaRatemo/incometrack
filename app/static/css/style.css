@@ -148,3 +148,16 @@ body{
   padding: 10px;
   background-color: #ffecec; /* Light red background */
 }
+
+.msg {
+  display: none; /* Hide the element initially */
+}
+
+.msg:not(:empty) {
+  display: block;
+  list-style-type: none; /* Remove bullet points */
+  color: red;
+  border: 1px solid red; /* Add red border */
+  padding: 10px;
+  background-color: #ffecec; /* Light red background */
+}
