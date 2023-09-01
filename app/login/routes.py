@@ -1,6 +1,6 @@
 from app.login import bp 
 from flask import redirect, render_template, jsonify, session, request, url_for
-from app.models.login import checkCredentials
+from app.models.login import Login
 #from app.houses import bp
 
 
@@ -14,7 +14,8 @@ def login():
 		_password = _json['password']
 		
 		if _email and _password:
-			user = checkCredentials(_email, _password)
+			check = Login(_email, _password)
+			user = check.checkCredentials()
 			if user != None:
 				session['username'] = user
 				print("Welcome, " + session.get('username'))

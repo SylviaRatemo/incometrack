@@ -2,15 +2,19 @@ import mysql.connector
 from app.models.user import Users
 from werkzeug.security import check_password_hash
 
+class Login():
+	def __init__(self, email, pwd):
+		self.email = email
+		self.pwd = pwd
 
-def checkCredentials(email, pwd):
-	try:
-		user = Users.query.filter_by(email=email).first()
-		#for entry in user:
-		#	print(f"Username: {entry.username}, Email: {entry.email}")
-		if user and user.password == pwd:
-			return user.username
-		return None
-	except Exception as e:
-		print(e)
-		return None
+	def checkCredentials(self):
+		try:
+			user = Users.query.filter_by(email=self.email).first()
+			#for entry in user:
+			#	print(f"Username: {entry.username}, Email: {entry.email}")
+			if user and user.password == self.pwd:
+				return user.username
+			return None
+		except Exception as e:
+			print(e)
+			return None

@@ -17,7 +17,7 @@ CREATE TABLE houses(
     name VARCHAR(255) NOT NULL,
     location VARCHAR(255) NOT NULL,
     unitCount INT NOT NULL,
-    occupancyRate DECIMAL(5, 2),
+    occupancyRate DECIMAL(5, 2) DEFAULT NULL,
     totalRent DECIMAL(10, 2) NOT NULL
 );
 
