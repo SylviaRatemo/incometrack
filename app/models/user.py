@@ -1,7 +1,5 @@
 from app.extensions import db
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine, Column, Integer, String
-#  Base = declarative_base()
 
 class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)

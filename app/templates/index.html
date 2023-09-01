@@ -26,7 +26,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="{{ url_for('main.index') }}">Dashboard</a></li>
-            <li><a href="{{ url_for('houses.houses') }}">Units</a></li>
+            <li><a href="{{ url_for('houses.houses') }}">Houses</a></li>
             <li><a href="{{ url_for('units.units') }}">Units</a></li>
             <li><a href="{{ url_for('tenants.tenants') }}">Tenants</a></li>
           </ul>
@@ -37,7 +37,7 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
+    <input type="hidden" id="logout-url" value="{{ url_for('login.logout') }}">
     <header id="header">
       <div class="container">
         <div class="row">
@@ -229,5 +229,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/auth.js') }}"></script>
     </body>
 </html>
