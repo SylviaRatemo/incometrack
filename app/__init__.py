@@ -2,6 +2,7 @@ from flask import Flask
 from app.extensions import db
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.exc import ProgrammingError
 import secrets
 
 def create_app(config_class=Config):
@@ -9,8 +10,18 @@ def create_app(config_class=Config):
     
     app.config.from_object(config_class)
 
-    db.init_app(app)    
-    
+    db.init_app(app)
+
+    with app.app_context():
+        try:
+            db.create_all()
+        except ProgrammingError as e:
+            if "Table 'houses' already exists" in str(e):
+                print("Table 'houses' already exists. Continuing...")
+            else:
+                # Handle other programming errors
+                print("Error creating database tables:", str(e))
+       
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
     
@@ -29,5 +40,6 @@ def create_app(config_class=Config):
     return app
 
 if __name__ == '__main__':
+    print("main works")
     app = create_app()
-    app.run(debug=True)
+    app.run()

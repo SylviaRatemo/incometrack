@@ -21,6 +21,9 @@ CREATE TABLE houses(
     totalRent DECIMAL(10, 2) NOT NULL
 );
 
+INSERT INTO houses (name, location, unitCount, occupancyRate, totalRent)
+VALUES ('Bluehouse', 'Githurai 45', 35, 80.2, 112000);
+
 CREATE TABLE units(
     unitId VARCHAR(30),
     houseId INT,

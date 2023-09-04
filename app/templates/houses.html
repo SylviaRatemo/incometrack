@@ -115,33 +115,21 @@
                       <tr>
                         <th>Title</th>
                         <th>Location</th>
-                        <th>Created</th>
+                        <th>Total Rent</th>
+                        <th>Occupancy Rate</th>
                         <th></th>
                       </tr>
-                      <tr>
-                        <td>Home</td>
-                        <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
-                        <td>Dec 12, 2016</td>
-                        <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
-                      </tr>
-                      <tr>
-                        <td>About</td>
-                        <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
-                        <td>Dec 13, 2016</td>
-                        <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
-                      </tr>
-                      <tr>
-                        <td>Services</td>
-                        <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
-                        <td>Dec 13, 2016</td>
-                        <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
-                      </tr>
-                      <tr>
-                        <td>Contact</td>
-                        <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
-                        <td>Dec 14, 2016</td>
-                        <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
-                      </tr>
+                      {% block content%}
+                        {% for house in houses %}
+                        <tr>
+                          <td>{{ house.name }}</td>
+                          <td>{{ house.location}}</td>
+                          <td>{{ house.totalRent }}</td>
+                          <td style="text-align: center;">{{ house.occupancyRate }}</td>
+                          <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                      {% endblock %}
                     </table>
               </div>
             </div>
