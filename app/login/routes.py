@@ -12,15 +12,16 @@ def login():
 		#print(_json)
 		_email = _json['email']
 		_password = _json['password']
-		
+		check = Login(_email, _password)
+		user = check.checkCredentials()
 		if _email and _password:
-			check = Login(_email, _password)
-			user = check.checkCredentials()
 			if user != None:
 				session['username'] = user
+				session['email'] = _email
 				print("Welcome, " + session.get('username'))
-				return jsonify(user)
-	return render_template('login.html')
+				return jsonify(user) 
+	else:
+		return render_template('login.html')
 
 @bp.route('/logout')
 def logout():

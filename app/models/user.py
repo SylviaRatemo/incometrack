@@ -7,9 +7,8 @@ class Users(db.Model):
     email = db.Column(db.String(30), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)
 
-    #engine = create_engine('mysql://root:root@localhost/incometracker')
-
-    #Base.metadata.create_all(engine)
-
-    def __repr__(self):
-        return f'<User {self.username}>'
+    def __init__(self, id, username, email, password):
+        self.id = id
+        self.username = username
+        self.email = email
+        self.password = password
