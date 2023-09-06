@@ -1,4 +1,4 @@
-# Income Track
+# Income Tracker
 This is a system that helps landlords track money collected from their clients. For instance, a landlord can track the number of tenants who have paid their rent and those who have not. The goal is to visualise the health of a business based on the firm’s bottom line, say 90% payment.
 
 #### Team Members
