@@ -25,13 +25,13 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="{{ url_for('main.index') }}">Dashboard</a></li>
             <li><a href="{{ url_for('houses.houses') }}">Houses</a></li>
             <li><a href="{{ url_for('units.units') }}">Units</a></li>
             <li class="active"><a href="tenants.html">Tenants</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Welcome, Sylvia</a></li>
+            <li><a href="#">Welcome, {% block user%} {{ user.username }} {% endblock %}</a></li>
             <li><a href="login.html">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->

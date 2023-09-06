@@ -31,7 +31,7 @@
             <li><a href="{{ url_for('tenants.tenants') }}">Tenants</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Welcome, Sylvia</a></li>
+            <li><a href="#">Welcome, {% block user%} {{ user.username }} {% endblock %}</a></li>
             <li><a id="logout">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -64,8 +64,8 @@
     <section id="breadcrumb">
       <div class="container">
         <ol class="breadcrumb">
-          <li><a href="index.html">Dashboard</a></li>
-          <li><a href="pages.html">Houses</a></li>
+          <li><a href="{{ url_for('main.index') }}">Dashboard</a></li>
+          <li><a href="{{ url_for('houses.houses') }}">Houses</a></li>
           <li class="active">Edit House</li>
         </ol>
       </div>
