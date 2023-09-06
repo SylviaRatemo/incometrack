@@ -15,15 +15,14 @@ def create_app(config_class=Config):
     with app.app_context():
         try:
             db.create_all()
-        except ProgrammingError as e:
-            if "Table 'houses' already exists" in str(e):
-                print("Table 'houses' already exists. Continuing...")
-            else:
-                # Handle other programming errors
-                print("Error creating database tables:", str(e))
+        except Exception as e:
+            print(str(e))
        
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
+
+    from app.dashboard import bp as dashboard_bp
+    app.register_blueprint(dashboard_bp)
     
     from app.login import bp as login_bp
     app.register_blueprint(login_bp)

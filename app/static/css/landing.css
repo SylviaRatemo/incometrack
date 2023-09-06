@@ -1,0 +1,195 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Assistant", sans-serif;
+}
+
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 77vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  background: rgb(109, 14, 177);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 4, 50, 1) 0%,
+    rgba(255, 10, 71, 0.726)) 51%,
+    rgba(255, 16, 48, 0.507) 100%
+  ;
+}
+
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 360px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-size: cover;
+  height: 40%;
+}
+
+.home-container .home-headings {
+  position: absolute;
+  top: 20%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  padding: 50px 20px;
+}
+
+.home-container .home-headings h4 {
+  padding-bottom: 40px;
+  letter-spacing: 3px;
+}
+
+.home-container .home-buttons {
+  padding-top: 150px;
+}
+
+.home-container .home-buttons button {
+  position: relative;
+  border: none;
+  border-radius: 40px;
+  margin: 0px 20px;
+  z-index: 4;
+}
+
+.home-container .home-buttons button a {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+}
+
+.home-container .home-buttons .btn1 {
+  padding: 15px 60px;
+  background-color: #333333;
+  border-color: #c0392b;
+  border: 2px #ed1c94;
+  transition: 0.5s all ease;
+}
+.home-container .home-buttons .btn2 {
+  padding: 15px 60px;
+  background-color: #333333;
+  border-color: #c0392b;
+  border: 2px #ed1c94;
+  transition: 0.5s all ease;
+}
+
+.home-container .home-buttons button:hover {
+  border: none;
+  background-color: #4b19d5;
+}
+
+.home-container .home-buttons .btn1:hover {
+  background-color: #4b19d5;
+}
+
+.home-container .paralaxis {
+  width: 100%;
+  position: absolute;
+}
+
+.home-container .paralaxis .img1 {
+  position: absolute;
+  top: -260px;
+  left: 50px;
+}
+
+.home-container .paralaxis .img2 img {
+  width: 70%;
+}
+.home-container .paralaxis .img1 img {
+  width: 70%;
+}
+
+.home-container .paralaxis .img2 {
+  position: absolute;
+  top: -260px;
+  right: 36px;
+}
+.home-container .paralaxis .img3 {
+  position: absolute;
+  top: 65px;
+  right: 230px;
+}
+.home-container .paralaxis .img4 {
+  position: absolute;
+  top: 65px;
+  left: 221px;
+}
+
+.coming:hover::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: transparent;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333;
+  padding: 50px 0px;
+}
+
+footer .left {
+  width: 20%;
+}
+footer .left img {
+  width: 50%;
+}
+footer .mid {
+  width: 40%;
+  color: grey;
+  text-align: center;
+}
+footer .right {
+  width: 20%;
+  color: white;
+  text-align: center;
+}
+
+footer .right i {
+  padding: 15px;
+  background-color: #21212e;
+  border-radius: 50%;
+  margin: 0px 3px;
+  transition: all 0.3s;
+}
+
+footer .right .fa-facebook {
+  padding: 15px 18px;
+}
+
+footer .right .fa-facebook:hover {
+  background-color: #286bb5;
+}
+footer .right .fa-twitter:hover {
+  background-color: #1da1f2;
+}
+footer .right .fa-linkedin:hover {
+  background-color: #1da1f2;
+}
+footer .right .fa-instagram:hover {
+  background-color: #53322e;
+}
+footer .right .fa-google:hover {
+  background-color: #f72a25;
+}

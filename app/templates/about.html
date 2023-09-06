@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{ url_for('static', filename='/css/landing.css') }}" rel="stylesheet">
+
+    <!-- link google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Poppins:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link google fonts -->
+
+    <!-- font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- font awesome link -->
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <title>Income Tracker</title>
+  </head>
+
+  <body>
+    <div class="home-container">
+      <div class="home-headings">
+        <h4>Welcome to Income Tracker</h4>
+        <h1>Rent and Rental Management</h1>
+      </div>
+      <div class="home-buttons">
+        <button class="btn1"><a href="{{ url_for('login.login') }}">Admin Login</a></button>
+        <button class="btn2"><a href="">Contact Us</a></button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="mid">
+        <span>© 2023 Income Tracker</span>
+      </div>
+      <div class="right">
+        <i class="fa fa-facebook item" href="https://www.facebook.com/profile.php?id=61550908024959"></i>
+        <i class="fa fa-instagram item"></i>
+        <i class="fa fa-twitter item"></i>
+        <i class="fa fa-google item"></i>
+        <i class="fa fa-linkedin item"></i>
+      </div>
+    </footer>
+
+    <!-- footer section end -->
+  </body>
+</html>
