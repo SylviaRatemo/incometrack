@@ -27,32 +27,154 @@
     </nav>
     <title>Income Tracker</title>
   </head>
+<body>
+  <div class="home-container">
+    <div class="home-headings">
+      <h4>Welcome to Income Tracker</h4>
+      <h1>RENT AND RENTAL MANAGEMENT</h1>
+    </div>
+    <div class="home-buttons">
+      <button class="btn1"><a href="{{ url_for('login.login') }}">Admin Login</a></button>
+      <button class="btn2"><a href="https://www.facebook.com/profile.php?id=61550908024959" target="_blank">Contact Us</a></button>
+    </div>
+  </div>
 
-  <body>
-    <div class="home-container">
-      <div class="home-headings">
-        <h4>Welcome to Income Tracker</h4>
-        <h1>Rent and Rental Management</h1>
-      </div>
-      <div class="home-buttons">
-        <button class="btn1"><a href="{{ url_for('login.login') }}">Admin Login</a></button>
-        <button class="btn2"><a href="">Contact Us</a></button>
-      </div>
+  <div class="intro-section">
+    <div class="body-headings">
+      <h1>ABOUT</h1>
+      <div class="divider"></div>
     </div>
 
-    <footer>
-      <div class="mid">
-        <span>© 2023 Income Tracker</span>
-      </div>
-      <div class="right">
-        <i class="fa fa-facebook item" href="https://www.facebook.com/profile.php?id=61550908024959"></i>
-        <i class="fa fa-instagram item"></i>
-        <i class="fa fa-twitter item"></i>
-        <i class="fa fa-google item"></i>
-        <i class="fa fa-linkedin item"></i>
-      </div>
-    </footer>
+    <div class="about-section">
+      <p>Income Tracker is an idea that arose from watching my father struggle to track rent collected from his tenants. 
+        A few of his tenants could live rent-free because of poor record keeping. While there are spreadsheets designed to 
+        help with income tracking, I believe a customizable app with visual features may be easier for him.</p>
 
-    <!-- footer section end -->
-  </body>
+        <p>Initially, the project will be restricted to tracking rent but in the future, I will include other functionalities that allow 
+          tracking of client payments for other firms such as internet providers.</p>
+    </div>
+  </div>
+
+  <div class="intro-section">
+    <div class="body-headings">
+      <h1>SCREENSHOTS</h1>
+      <div class="divider"></div>
+    </div>
+
+    <div class="themes-data">
+      <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="/static/img/landing-bg.jpg" alt="Slide 1">
+            <div class="cap">Rent and Rental Management</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="/static/img/houses.png" alt="Slide 2">
+            <div class="cap">Houses Module</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="/static/img/unit.png" alt="Slide 3">
+            <div class="cap">Unit Module</div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+  
+  <!-- features theme section start -->
+  <div class="features-section">
+    <div class="body-headings">
+      <h1>FEATURES</h1>
+      <div class="divider"></div>
+    </div>
+
+    <div class="features">
+      <!-- feature card start -->
+
+      <div class="feature-card">
+        <div class="feature-head">
+          <!--<img class="feature-img" src="/static/img/listing.jpg" alt="" />-->
+          <h3>PROPERTY LISTING </h3>
+        </div>
+        <div class="feature-foot">
+          <p>
+            Allows users to add, edit, and remove property listings with details 
+            such as property name, location, total rent, and occupancy rate.
+          </p>
+        </div>
+      </div>
+
+      <!-- feature card end -->
+      <!-- feature card start -->
+
+      <div class="feature-card">
+        <div class="feature-head">
+          <!--<img class="feature-img" src="/static/img/tenant.jpg" alt="" />-->
+          <h3>TENANT MANAGEMENT</h3>
+        </div>
+        <div class="feature-foot">
+          <p>
+            Keeps track of tenant information, including contact details, 
+            and payment histories.
+          </p>
+        </div>
+      </div>
+
+      <!-- feature card end -->
+      <!-- feature card start -->
+
+      <div class="feature-card">
+        <div class="feature-head">
+          <!--<img class="feature-img" src="/static/img/analytics.jpg" alt="" />-->
+          <h3>FINANCIAL REPORT AND ANALYSIS</h3>
+        </div>
+        <div class="feature-foot">
+          <p>
+            Provides analytics and insights into property performance, 
+            vacancy rates, and rental income trends.
+          </p>
+        </div>
+      </div>
+
+      <!-- feature card end -->
+      <!-- feature card start -->
+
+      <div class="feature-card">
+        <div class="feature-head">
+          <!--<img class="feature-img" src="/static/img/custom.jpg" alt="" />-->
+          <h3>CUSTOMIZATION</h3>
+        </div>
+        <div class="feature-foot">
+          <p>
+            The system can be modified to ensure a landlord 
+            gets exactly what they need to manage their property.
+          </p>
+        </div>
+      </div>
+      <!-- feature card end -->
+
+
+  <!-- footer section start -->
+
+  <footer>
+    <div class="left">
+      <a href="https://github.com/SylviaRatemo/incometrack/">Project Code</a>
+    </div>
+
+    <div class="mid">
+      <span>© 2023 Income Tracker</span>
+    </div>
+
+    <div class="right">
+        <a href="https://www.linkedin.com/in/sylvia-ratemo/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/SylviaRatemo" target="_blank">GitHub</a>
+        <a href="https://twitter.com/RatemoSylvia" target="_blank">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- footer section end -->
+  <script type="text/javascript" src="{{ url_for('static', filename='/js/landing.js') }}"></script>
+</body>
+  
 </html>
