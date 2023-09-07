@@ -9,7 +9,7 @@ from app.models.user import Users
 def houses():
     email=session.get('email')
     user=Users.query.filter(Users.email == email).with_entities(Users.username).first()
-    return render_template('houses.html', houses=Houses.query.all(), user=user)
+    return render_template('houses.html', houses=Houses.query.all(), user=user, count=Houses.query.count())
 
 @bp.route('/edit')
 @login_required

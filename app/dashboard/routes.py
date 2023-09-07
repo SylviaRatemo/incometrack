@@ -4,9 +4,8 @@ from app.decorators import login_required
 from app.models.user import Users
 
 @bp.route('/dashboard')
-@bp.route('/index')
 @login_required
-def index():
+def dash():
 	email=session.get('email')
 	user=Users.query.filter(Users.email == email).with_entities(Users.username).first()
 	return render_template('index.html', user=user)

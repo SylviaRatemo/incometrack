@@ -1,0 +1,60 @@
+[2023-09-06 18:12:05 +0300] [13753] [INFO] Starting gunicorn 21.2.0
+[2023-09-06 18:12:05 +0300] [13753] [INFO] Listening at: http://0.0.0.0:5000 (13753)
+[2023-09-06 18:12:05 +0300] [13753] [INFO] Using worker: sync
+[2023-09-06 18:12:05 +0300] [13754] [INFO] Booting worker with pid: 13754
+[2023-09-06 18:12:05 +0300] [13755] [INFO] Booting worker with pid: 13755
+[2023-09-06 18:12:05 +0300] [13756] [INFO] Booting worker with pid: 13756
+[2023-09-06 18:12:05 +0300] [13757] [INFO] Booting worker with pid: 13757
+[2023-09-06 18:12:10 +0300] [13754] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/root/incometrack/myenv/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/root/incometrack/myenv/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 178, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+TypeError: create_app() takes from 0 to 1 positional arguments but 2 were given
+[2023-09-06 18:12:30 +0300] [13753] [INFO] Handling signal: int
+[2023-09-06 18:12:30 +0300] [13754] [INFO] Worker exiting (pid: 13754)
+[2023-09-06 18:12:30 +0300] [13756] [INFO] Worker exiting (pid: 13756)
+[2023-09-06 18:12:30 +0300] [13755] [INFO] Worker exiting (pid: 13755)
+[2023-09-06 18:12:30 +0300] [13757] [INFO] Worker exiting (pid: 13757)
+[2023-09-06 18:12:31 +0300] [13753] [INFO] Shutting down: Master
+[2023-09-06 18:13:31 +0300] [14173] [INFO] Starting gunicorn 21.2.0
+[2023-09-06 18:13:31 +0300] [14173] [INFO] Listening at: http://0.0.0.0:5000 (14173)
+[2023-09-06 18:13:31 +0300] [14173] [INFO] Using worker: sync
+[2023-09-06 18:13:31 +0300] [14174] [INFO] Booting worker with pid: 14174
+[2023-09-06 18:13:31 +0300] [14175] [INFO] Booting worker with pid: 14175
+[2023-09-06 18:13:31 +0300] [14176] [INFO] Booting worker with pid: 14176
+[2023-09-06 18:13:31 +0300] [14177] [INFO] Booting worker with pid: 14177
+[2023-09-06 18:13:34 +0300] [14174] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/root/incometrack/myenv/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/root/incometrack/myenv/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 178, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+TypeError: create_app() takes from 0 to 1 positional arguments but 2 were given
+[2023-09-06 18:13:38 +0300] [14173] [INFO] Handling signal: int
+[2023-09-06 18:13:38 +0300] [14174] [INFO] Worker exiting (pid: 14174)
+[2023-09-06 18:13:38 +0300] [14176] [INFO] Worker exiting (pid: 14176)
+[2023-09-06 18:13:38 +0300] [14175] [INFO] Worker exiting (pid: 14175)
+[2023-09-06 18:13:38 +0300] [14177] [INFO] Worker exiting (pid: 14177)
+[2023-09-06 18:13:39 +0300] [14173] [INFO] Shutting down: Master
+[2023-09-06 18:14:23 +0300] [14526] [INFO] Starting gunicorn 21.2.0
+[2023-09-06 18:14:23 +0300] [14526] [INFO] Listening at: http://0.0.0.0:5000 (14526)
+[2023-09-06 18:14:23 +0300] [14526] [INFO] Using worker: sync
+[2023-09-06 18:14:23 +0300] [14530] [INFO] Booting worker with pid: 14530
+[2023-09-06 18:14:23 +0300] [14531] [INFO] Booting worker with pid: 14531
+[2023-09-06 18:14:23 +0300] [14532] [INFO] Booting worker with pid: 14532
+[2023-09-06 18:14:23 +0300] [14533] [INFO] Booting worker with pid: 14533
+[2023-09-06 18:14:26 +0300] [14531] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/root/incometrack/myenv/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/root/incometrack/myenv/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 178, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+TypeError: create_app() takes from 0 to 1 positional arguments but 2 were given
+[2023-09-06 18:14:34 +0300] [14526] [INFO] Handling signal: int
+[2023-09-06 18:14:34 +0300] [14531] [INFO] Worker exiting (pid: 14531)
+[2023-09-06 18:14:34 +0300] [14530] [INFO] Worker exiting (pid: 14530)
+[2023-09-06 18:14:34 +0300] [14533] [INFO] Worker exiting (pid: 14533)
+[2023-09-06 18:14:34 +0300] [14532] [INFO] Worker exiting (pid: 14532)
+[2023-09-06 18:14:35 +0300] [14526] [INFO] Shutting down: Master

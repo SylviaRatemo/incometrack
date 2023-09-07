@@ -22,7 +22,7 @@ CREATE TABLE houses(
 );
 
 INSERT INTO houses (name, location, unitCount, occupancyRate, totalRent)
-VALUES ('Bluehouse', 'Githurai 45', 35, 80.2, 112000);
+VALUES ('House 2', 'Githurai 45', 34, 90, 71700);
 
 CREATE TABLE units(
     unitId VARCHAR(30),
