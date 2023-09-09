@@ -6,6 +6,7 @@ FLUSH PRIVILEGES;
 
 setup issues:
 ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY 'root';
+
 CREATE TABLE users(
     id INT AUTO_INCREMENT PRIMARY KEY,
     username varchar(32),
@@ -25,7 +26,8 @@ CREATE TABLE houses(
     totalRent DECIMAL(10, 2) NOT NULL
 );
 INSERT INTO houses (name, location, unitCount, occupancyRate, totalRent)
-VALUES ('House 2', 'Githurai 45', 34, 90, 71700);
+VALUES ('Bluehouse', 'Githurai 45', 35, 80.2, 110000), 
+('House 2', 'Githurai 45', 34, 90, 71700);
 
 CREATE TABLE units(
     unitId VARCHAR(30),
