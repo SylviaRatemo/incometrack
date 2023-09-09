@@ -1,2 +1,5 @@
 __pycache__
 myenv
+Caddyfile
+gunicorn_error.log
+setup_mysql.sql

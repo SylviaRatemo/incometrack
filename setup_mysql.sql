@@ -15,6 +15,8 @@ CREATE TABLE users(
     );
 INSERT INTO users (username, email, password)
 VALUES ('Sylvia Ratemo', 'ratemosylvia@gmail.com', 'root');
+INSERT INTO users (username, email, password)
+VALUES ('Assa Ratemo', 'assaratemo@gmail.com', 'mwango');
 
 
 CREATE TABLE houses(
