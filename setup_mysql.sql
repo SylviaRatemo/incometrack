@@ -4,13 +4,17 @@ GRANT ALL PRIVILEGES ON `incometracker`.* TO 'root'@'localhost';
 GRANT SELECT ON `performance_schema`.* TO 'root'@'localhost';
 FLUSH PRIVILEGES;
 
+setup issues:
+ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY 'root';
 CREATE TABLE users(
-    id INT(11),
+    id INT AUTO_INCREMENT PRIMARY KEY,
     username varchar(32),
     email varchar(30),
-    password varchar(60),
-    primary key(id)
+    password varchar(60)
     );
+INSERT INTO users (username, email, password)
+VALUES ('Sylvia Ratemo', 'ratemosylvia@gmail.com', 'root');
+
 
 CREATE TABLE houses(
     houseId INT AUTO_INCREMENT PRIMARY KEY,
@@ -20,7 +24,6 @@ CREATE TABLE houses(
     occupancyRate DECIMAL(5, 2) DEFAULT NULL,
     totalRent DECIMAL(10, 2) NOT NULL
 );
-
 INSERT INTO houses (name, location, unitCount, occupancyRate, totalRent)
 VALUES ('House 2', 'Githurai 45', 34, 90, 71700);
 
