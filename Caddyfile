@@ -1,5 +1,5 @@
 www.sylviaratemo.tech {
-    redir http://sylviaratemo.tech{uri}
+    redir https://sylviaratemo.tech{uri}
 }
 
 
