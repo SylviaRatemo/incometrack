@@ -15,3 +15,17 @@ class Houses(db.Model):
         self.unitCount = unitCount
         self.occupancyRate = occupancyRate
         self.totalRent = totalRent
+    
+    #def fetch(self, houseid):
+     #   house = db.query(Houses).filter_by(self.houseId==houseid).first()
+      #  return house
+
+    def edit(self, name, location, unitcount, occupancyrate, totalrent):
+            db.name = name
+            db.location = location
+            db.unitCount = unitcount
+            db.occupancyRate = occupancyrate
+            db.totalRent = totalrent
+            db.session.commit()
+            print("Submitted")
+            return "Submitted"

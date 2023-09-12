@@ -62,4 +62,35 @@ $(document).ready(function() {
 			//}
 		});
 	});
+	$('#editSubmit').on('click', function(e) {
+		e.preventDefault();
+
+		var name = $('#name').val();
+		var location = $('#location').val();
+        var unitcount = $('#unitcount').val();
+		var occupancyrate = $('#occupancyrate').val();
+        var totalrent = $('#totalrent').val();
+
+		$.ajax({
+			method: "POST",
+			url: '/edit',
+			contentType: 'application/json;charset=UTF-8',
+			data: JSON.stringify({'houseid': houseId, 'name': name, 'location': location, 'unitcount': unitcount, 'occupancyrate': occupancyrate, 'totalrent': totalrent}),
+			dataType: "json",
+			success: function(data) {
+				var housesURL = document.getElementById('houses-url').value;
+				window.location.href = housesURL;
+			},
+			statusCode: {
+				400: function() {
+					$('#msg').html('<span style="color: red;">Modificaton failed</span>');
+				}
+			},
+			error: function(xhr, textStatus, errorThrown) {
+				console.log("Error:", textStatus, errorThrown);
+				var errorMsg = "Modification failed! Try Again!";
+				$('#msg').html('<span>' + errorMsg + '</span>');
+			}
+        });
+    })
 });

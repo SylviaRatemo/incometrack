@@ -119,8 +119,9 @@
                 <br>
                 <table class="table table-striped table-hover">
                       <tr>
-                        <th>Title</th>
+                        <th>Name</th>
                         <th>Location</th>
+                        <th>Unit Count</th>
                         <th>Total Rent</th>
                         <th>Occupancy Rate</th>
                         <th></th>
@@ -130,9 +131,12 @@
                         <tr>
                           <td>{{ house.name }}</td>
                           <td>{{ house.location}}</td>
+                          <td>{{ house.unitCount }}</td>
                           <td>{{ house.totalRent }}</td>
                           <td style="text-align: center;">{{ house.occupancyRate }}</td>
-                          <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                          <td hidden="true" id="house_id">{{ house.houseId }}</td>
+                          <td><a class="btn btn-default" href="{{ url_for('houses.edit') }}">Edit</a> 
+                            <a class="btn btn-danger" href="#">Delete</a></td>
                         </tr>
                         {% endfor %}
                       {% endblock %}
