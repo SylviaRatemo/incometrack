@@ -1,9 +1,6 @@
 from flask import Flask
 from app.extensions import db
 from config import Config
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.exc import ProgrammingError
-import secrets
 
 
 app = Flask(__name__)
