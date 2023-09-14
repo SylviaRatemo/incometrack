@@ -41,3 +41,4 @@ Similarly to the choice technologies, I will utilize unit tests as a way to appl
 Existing Solutions
 There are more complex systems available that track various aspects of rental properties. This system is limited to the tracking of income or rather monies paid by clients. By so doing, the project has a possibility to grow and include multiple forms of businesses in the future.
  
+![cover](https://github.com/SylviaRatemo/incometrack/assets/12081174/431f547b-b782-4233-bb27-2ed71491e2aa)
